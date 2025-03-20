@@ -1,0 +1,226 @@
+/* Importa fontes do Google Fonts: Poppins e Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Define variáveis de cores e fontes para uso em todo o CSS */
+:root {
+    --cor-primaria: #0A1F44; /* Cor principal */
+    --cor-secundaria: #ffffff; /* Cor de fundo */
+    --cor-terciaria: #ffc933; /* Cor terciária */
+    --cor-hover: #1C3D71; /* Cor de hover */
+    --fonte-primaria: 'Poppins', sans-serif; /* Fonte primária */
+    --fonte-secundaria: 'Roboto', sans-serif; /* Fonte secundária */
+}
+
+body{
+    margin: 0; /* Remove margens de todos os elementos */
+    padding: 0; /* Remove preenchimentos de todos os elementos */
+    font-family: var(--fonte-primaria);
+    font-weight: bold;
+}
+
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0fr 4.5fr 0.9fr 0.3fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Cabecalho Cabecalho Cabecalho Cabecalho"
+      "Navegacao Navegacao Navegacao Navegacao"
+      "Conteudo Conteudo Conteudo Aside"
+      "Conteudo Conteudo Conteudo Aside"
+      "Rodape Rodape Rodape Rodape";
+}
+
+
+  
+.Cabecalho { grid-area: Cabecalho; }
+
+.Cabecalho{
+    background-image: url('../assets/icon.png');
+    background-position: 100%;
+    background-size: 100%;
+    text-align: center;
+
+}
+
+
+
+.logo_img{
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+.Conteudo {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Banner Banner Banner"
+      "social social social"
+      "social social social";
+    grid-area: Conteudo;
+}
+
+.Navegacao { grid-area: Navegacao; }
+
+.Navegacao{
+    margin: 0;
+}
+.nav_lista{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.nav_link{
+    text-decoration: none;
+    font-family: var(--fonte-primaria);
+    color: var(--cor-primaria);
+    margin: 0;
+    margin-right: 15px;
+}
+
+.nav_link:hover{
+    color: var(--cor-terciaria);
+}
+
+
+  
+.Aside { grid-area: Aside; }
+
+.Aside{
+    margin-left: 20vh;
+
+}
+
+.Aside_lista{
+    list-style: none;
+
+}
+
+.Aside_link{
+    display: block;
+    text-decoration: none;
+    color: var(--cor-primaria);
+    font-family: var(--fonte-primaria);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.Aside_link:hover{
+    color: var(--cor-terciaria);
+}
+
+.Banner { grid-area: Banner; }
+
+.Banner{
+    width: 100%; /* O banner ocupará 100% da largura da página */
+    height: 300px; /* Defina a altura desejada para o banner */
+    background-image: url('../assets/icon1.png'); /* Coloque o caminho correto da sua imagem */
+    background-size: cover; /* A imagem cobrirá todo o espaço do banner */
+    background-position: center; /* Centraliza a imagem no banner */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    border-radius: 500px;
+    margin-top: 5vh;
+    margin-left: 25vh;
+}
+ 
+.cards {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "fb twt tk"
+      ". . ."
+      ". . .";
+    grid-area: social;
+    margin-left: 50vh;
+    margin-top: 2vh;
+    column-gap: 10vh;
+}
+
+.fb { grid-area: fb; }
+
+.fb{
+    background-color: #fff; /* Fundo branco para os itens do menu */
+    border: 1px solid #ddd; /* Borda cinza clara */
+    border-radius: 8px; /* Bordas arredondadas */
+    overflow: hidden; /* Oculta o conteúdo que excede as bordas */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve para um efeito de profundidade */
+}
+#Facebook{
+    margin-top: 10px;
+}
+ 
+.twt { grid-area: twt; }
+
+.twt{
+    background-color: #fff; /* Fundo branco para os itens do menu */
+    border: 1px solid #ddd; /* Borda cinza clara */
+    border-radius: 8px; /* Bordas arredondadas */
+    overflow: hidden; /* Oculta o conteúdo que excede as bordas */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve para um efeito de profundidade */
+}
+
+#Twitter{
+    margin-top: 10px;
+}
+
+.tk { grid-area: tk; }
+
+.tk{
+    background-color: #fff; /* Fundo branco para os itens do menu */
+    border: 1px solid #ddd; /* Borda cinza clara */
+    border-radius: 8px; /* Bordas arredondadas */
+    overflow: hidden; /* Oculta o conteúdo que excede as bordas */
+    text-align: center; /* Centraliza o texto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve para um efeito de profundidade */
+}
+
+#TikTok{
+    margin-top: 10px;
+}
+
+
+#Facebook:hover{
+    
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+#TikTok:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+#Twitter:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+.Rodape { grid-area: Rodape; }
+
+.Rodape{
+    background-color: var(--cor-secundaria); /* Cor de fundo do rodapé */
+    text-align: center;
+    justify-items: center;
+}
+
+.Rodape_lista{
+    list-style: none;
+    align-items: center;
+}
+
+#rodape_img{
+    width: 60px; /* Define a largura do círculo */
+    height: 60px; /* Define a altura do círculo, deve ser igual à largura */
+    border-radius: 50%; /* Torna a imagem circular */
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorção */
+    overflow: hidden; /* Oculta qualquer parte da imagem que extrapolar o círculo */
+    margin: 5px;
+}
+  

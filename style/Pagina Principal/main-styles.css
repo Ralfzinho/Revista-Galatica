@@ -1,0 +1,165 @@
+/* Importa as fontes Poppins e Roboto do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* Define variáveis CSS para cores e fontes */
+:root {
+    --cor-primaria: #0A1F44;
+    --cor-secundaria: #ffffff;
+    --cor-terciaria: #ffc933;
+    --cor-hover: #1C3D71;
+    --fonte-primaria:'Poppins', sans-serif;
+    --fonte-secundaria:'Roboto', sans-serif;
+
+}
+
+
+/* Resetando margens e preenchimentos padrão */
+*{
+    margin: 0; /* Remove margens de todos os elementos */
+    padding: 0; /* Remove preenchimentos de todos os elementos */
+    box-sizing: border-box; /* Inclui preenchimento e borda no cálculo da largura e altura */
+
+}
+
+
+/* Estilo para os títulos do cabeçalho */
+.cabecalho_titulos {
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    font-family: var(--fonte-primaria); /* Usa a fonte primária */
+    background-image: url('../assets/icon.png');
+    background-size: 100%;
+    background-position: 100%;
+}
+
+.logo_img{
+    border-radius: 90px;
+    margin-top: 5px;
+}
+
+.cabecalho_text{
+    font-style: italic;
+    font-family: var(--fonte-secundaria);
+}
+
+
+/* Estilo do corpo da página */
+body {
+    font-family: var(--fonte-secundaria); /* Usa a fonte secundária */
+    background-color: var(--cor-secundaria); /* Cor de fundo do corpo */
+    color: var(--cor-primaria); /* Cor do texto */
+    line-height: 1.6; /* Define a altura da linha */
+}
+
+
+/* Contêiner principal que organiza os elementos em flexbox */
+.layout-container {
+    display: flex; /* Usa flexbox para o layout */
+    min-height: 100vh; /* Garante que o contêiner ocupe toda a altura da tela */
+}
+
+
+/* Estilo do menu de navegação */
+.nav {
+    top: 0; /* Fixa o nav no topo */
+    height: 100vh; /* Altura do menu igual à altura da tela */
+    position: sticky; /* Fixa o nav na tela ao rolar */
+
+
+}
+
+
+/* Estilo para a área de artigos */
+.layout-artigos {
+    margin: 0; /* Remove qualquer margem superior */
+    padding: 0px; /* Preenchimento interno da área de artigos */
+    flex-grow: 1; /* Faz com que a área de artigos ocupe o espaço restante */
+    text-align: justify;
+}
+
+
+/* Estilo para o menu principal do cabeçalho */
+.cabecalho_menu_principal {
+    list-style-type: none; /* Remove a marcação da lista */
+    padding: 0; /* Remove o preenchimento */
+    margin-bottom: 15px; /* Espaçamento abaixo do menu */
+    margin: 20px;
+}
+
+
+/* Estilo para os links do menu */
+.cabecalho_menu_link {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: var(--cor-primaria); /* Cor do texto dos links */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    display: block; /* Faz com que os links ocupem toda a largura disponível */
+    margin-bottom: 15vh; /* Espaçamento abaixo dos links */
+}
+
+
+/* Estilo para os links ao passar o mouse */
+.cabecalho_menu_link:hover {
+    color: var(--cor-terciaria); /* Muda a cor ao passar o mouse */
+}
+
+
+/* Estilo para o título principal do artigo */
+.artigo__principal__titulo {
+    font-family: var(--fonte-primaria); /* Usa a fonte primária */
+    font-size: larger; /* Aumenta o tamanho da fonte */
+    margin: 20px auto; /* Espaçamento acima e abaixo, centraliza horizontalmente */
+}
+
+
+.conteudo_adicional_corpo{
+    top: 0; /* Fixa o nav no topo */
+    width: 500px; /* Largura do menu de navegação */
+    height: 100vh; /* Altura do menu igual à altura da tela */
+    position: sticky; /* Fixa o nav na tela ao rolar */
+    margin-left: 20px;
+}
+
+
+.conteudo_adicional_lista{
+    list-style-type: none; /* Remove a marcação da lista */
+    padding: 0; /* Remove o preenchimento */
+    margin-bottom: 15px; /* Espaçamento abaixo do menu */
+}
+
+
+.conteudo_adicional_link{
+    text-decoration:underline; /* Remove sublinhado dos links */
+    color: var(--cor-primaria); /* Cor do texto dos links */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    display: block; /* Faz com que os links ocupem toda a largura disponível */
+    margin-right: 20px; /* Espaçamento à direita */
+    margin-bottom: 10vh; /* Espaçamento abaixo dos links */   
+}
+
+
+/* Estilo para o rodapé */
+.layout-rodape {
+    background-color: var(--cor-secundaria); /* Cor de fundo do rodapé */
+    text-align: center;
+    padding: 10px;
+    width: 100%; /* Garante que o rodapé ocupe toda a largura */
+    justify-items: center;
+}
+
+.layout-rodape-lista{
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+
+.img_rodape{
+    width: 60px; /* Define a largura do círculo */
+    height: 60px; /* Define a altura do círculo, deve ser igual à largura */
+    border-radius: 50%; /* Torna a imagem circular */
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorção */
+    overflow: hidden; /* Oculta qualquer parte da imagem que extrapolar o círculo */
+    margin: 5px;
+}

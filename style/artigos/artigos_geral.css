@@ -1,0 +1,175 @@
+/* Importa as fontes Poppins e Roboto do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* Define variáveis CSS para cores e fontes */
+:root {
+    --cor-primaria: #0A1F44;
+    --cor-secundaria: #ffffff;
+    --cor-terciaria: #ffc933;
+    --cor-hover: #1C3D71;
+    --fonte-primaria:'Poppins', sans-serif;
+    --fonte-secundaria:'Roboto', sans-serif;
+
+}
+
+html, body {
+    height: 100%; /* Garante que o layout ocupe toda a altura da página */
+}
+
+
+/* Resetando margens e preenchimentos padrão */
+*{
+    margin: 0; /* Remove margens de todos os elementos */
+    padding: 0; /* Remove preenchimentos de todos os elementos */
+    box-sizing: border-box; /* Inclui preenchimento e borda no cálculo da largura e altura */
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, conteúdo flexível e rodapé */
+    text-align: justify; /* justifica o texto para deixar mais centralizado */
+}
+
+/* Estilo para o menu principal do cabeçalho */
+.cabecalho_menu_principal2 {
+    list-style-type: none; /* Remove a marcação da lista */
+    display: flex; /* Faz com que os links ocupem toda a largura disponível */
+    justify-content: space-around;
+    margin-right: 70vh;
+    margin-left: 70vh;
+}
+
+
+/* Estilo para os links do menu */
+.cabecalho_menu_link2 {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: var(--cor-primaria); /* Cor do texto dos links */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+}
+
+.cabecalho_menu_link2:hover{
+    color: var(--cor-terciaria);
+}
+
+/* Define o layout das colunas principais */
+.layout-container2 {
+    display: grid;
+    grid-template-columns: 6fr 1fr; /* Duas colunas para conteúdo e imagem */
+    grid-template-areas: 
+        "header header"
+        "content image"
+        "footer footer";
+    gap: 20px; /* Adiciona espaçamento entre os elementos */
+    min-height: 100vh; /* Garante que o container ocupe a altura total da janela */
+    margin: 5vh 50vh;
+}
+
+/* Define a área do rodapé */
+.layout-rodape {
+    background-color: var(--cor-secundaria); /* Cor de fundo do rodapé */
+    text-align: center;
+    padding: 10px;
+    width: 100%; /* Garante que o rodapé ocupe toda a largura */
+    justify-items: center;
+}
+
+/* Define a área do conteúdo */
+.content {
+    grid-area: content;
+    padding: 20px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    max-width: 500px; /* Limita o tamanho máximo da imagem */
+
+}
+
+.img_artigo{
+    border-radius: 50px;
+}
+
+.layout-img{
+    margin-bottom: 50px;
+}
+
+/* Estilos do cabeçalho */
+.header {
+    grid-area: header;
+    text-align: center;
+    font-family: var(--fonte-primaria);
+    font-size: 2em;
+    padding-bottom: 20px;
+}
+
+
+.artigo_comentario{
+    text-decoration:wavy;
+    font-style: italic;
+    margin: 10px;
+}
+.conteudo_extra{
+    padding: 10px;
+    margin: 20px;
+}
+
+.conteudo_extra_lista{
+    list-style-type: none; /* Remove a marcação da lista */
+    padding: 0; /* Remove o preenchimento */
+    margin-bottom: 15px; /* Espaçamento abaixo do menu */
+}
+
+.conteudo_extra_link{
+    text-decoration:none; /* Remove sublinhado dos links */
+    color: var(--cor-primaria); /* Cor do texto dos links */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    display: block; /* Faz com que os links ocupem toda a largura disponível */
+    margin-right: 20px; /* Espaçamento à direita */
+    margin-bottom: 10px; /* Espaçamento abaixo dos links */  
+}
+
+.artigo__texto__negrito{
+    font-weight: bold;
+    font-family: var(--fonte-primaria);
+}
+
+.img_autor_artigo{
+    width: 60px; /* Define a largura do círculo */
+    height: 60px; /* Define a altura do círculo, deve ser igual à largura */
+    border-radius: 50%; /* Torna a imagem circular */
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorção */
+    overflow: hidden; /* Oculta qualquer parte da imagem que extrapolar o círculo */
+}
+
+.autor_artigo{
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nome_autor_artigo{
+    margin-left: 10px;
+    font-style:italic;
+    font-family: var(--fonte-primaria);
+    color: var(--cor-terciaria);
+    
+}
+
+.layout-rodape-lista{
+    display: flex;
+    align-items: center;
+}
+
+.img_rodape{
+    width: 60px; /* Define a largura do círculo */
+    height: 60px; /* Define a altura do círculo, deve ser igual à largura */
+    border-radius: 50%; /* Torna a imagem circular */
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorção */
+    overflow: hidden; /* Oculta qualquer parte da imagem que extrapolar o círculo */
+    margin: 5px;
+}
+
