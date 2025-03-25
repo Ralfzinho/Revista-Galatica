@@ -26,18 +26,3 @@ body {
 .card:hover {
     transform: translateY(-5px);
 }
-
-.card img {
-    width: 100%;
-    height: auto;
-}
-
-.card-body {
-    text-align: center;
-    padding: 15px;
-}
-
-.card-title {
-    font-weight: bold;
-    font-size: 18px;
-}
