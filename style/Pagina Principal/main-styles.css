@@ -25,29 +25,10 @@
     cursor: pointer;
 }
 
-#artigo_destaque{
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-}
-
-#artigo_destaque:hover{
-    transform: translateY(-5px);
-    cursor: pointer;
-}
-
 a:link {
     text-decoration: none;
-}
-
-a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: inherit; /* Mantém a cor padrão do texto */
-}
-  
-a:visited,
-a:visited h1 { 
-  color: inherit; /* Mantém a cor original do link e do título */
-}
+    color: black;
+}   
 
 .card-text{
     text-align: justify;
@@ -55,4 +36,37 @@ a:visited h1 {
 
 .card-title{
     text-align: justify;
+}
+
+.btn-outline-custom {
+    color: #ff6600 !important;  /* Cor do texto */
+    border-color: #ff6600 !important; /* Cor da borda */
+}
+
+.btn-outline-custom:hover {
+    background-color: #ff6600 !important; /* Cor do fundo ao passar o mouse */
+    color: white !important; /* Cor do texto ao passar o mouse */
+}
+
+.bg-custom{
+    background-color: #f3f3f3 ;
+}
+.nav-link,.navbar-brand,.dropdown-item,.form-control{
+    color: #ff6600 !important;
+    font-family: var(--fonte-primaria);
+}
+
+.form-control:focus {
+    border-color: orange !important; /* Altera a borda para laranja quando o input estiver focado */
+    box-shadow: 0 0 0 0.25rem rgba(255, 165, 0, 0.25)!important ; /* Adiciona uma leve sombra laranja para destaque */
+}
+
+/* Alterando a borda do input quando não estiver em foco */
+.form-control {
+    border-color: orange !important; /* Altera a borda padrão para laranja */
+}
+
+#artigo_destaque{
+    border-radius: 100px;
+    object-fit:scale-down; max-height: 650px; border-radius: 10px;
 }
