@@ -70,3 +70,7 @@ a:link {
     border-radius: 100px;
     object-fit:scale-down; max-height: 650px; border-radius: 10px;
 }
+
+.carousel-caption{
+    color: #f60 !important;;
+}
